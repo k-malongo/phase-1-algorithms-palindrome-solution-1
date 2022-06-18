@@ -1,12 +1,13 @@
 function isPalindrome(word) {
-  // Write your algorithm here
-  var len = Math.floor(word.length / 2);
-  for (var i = 0; i < len; i++)
-    if (word[i] !== word[word.length - i - 1])
-      return false;
-  return true;
+  // reverse the input string
+  const reversedWord = reverseString(word);
+  // compare the reversed string to the input
+  return word === reversedWord;
 }
-
+// fuction to reverse word
+function reverseString(word) {
+  return word.split("").reverse().join("");
+}
 /* 
   Add your pseudocode here
   reverse the input string
